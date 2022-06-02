@@ -1,0 +1,33 @@
+
+
+body{
+ height:100vh;
+}
+
+#app{
+  height:100vh;
+}
+
+.bleft-blue {
+  border-left: 7px solid #31BAF9;
+}
+
+.bleft-green {
+  border-left: 7px solid #86D73F;
+}
+
+.bleft-yellow{
+  border-left:17px solid yellow;
+}
+
+.bleft-FF982D {
+  border-left: 7px solid #FF982D;
+}
+
+.bleft-FF6C03 {
+  border-left: 7px solid #FF6C03;
+}
+
+.bleft-FF1200 {
+  border-left: 7px solid #FF1200;
+}

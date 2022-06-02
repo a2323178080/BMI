@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,  initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/all.css">
+</head>
+
+
+
+<body>
+    <div id="app" style="display:contents">
+         <div >
+             <div class="container   p-5 bg-secondary" >
+                 <div class="row">
+                     <div class="col-12  " >
+                         <div class="row">
+
+                             <div class="col-4"><img src="https://picsum.photos/150/200?grayscale"></div>
+                             <div class="col-8">
+                                 <div class="row">
+
+                                     <div class="col-5">
+                                        <label for="" class="form-label">身高cm</label>
+                                        <input type="text" class="form-control"
+                                        v-model="height">
+                                       {{height}}
+                                       {{BMI}}
+                                      
+                                             
+                                        <label for="" class="form-label">體重kg</label>
+                                        <input type="text" class="form-control"
+                                        v-model="weight">
+                                     </div>
+
+                                     <div class="col-4">
+                                        <input type="button" value="看結果" class=" rounded-circle border-0 w-50 h-50 mt-5  btn-warning" v-on:click="calculate">
+                                     </div>
+
+                                 </div>
+                                 
+                              
+                            
+                            
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+       
+
+
+
+    
+       <!-- ------------------------------------------------- -->
+
+
+
+ 
+
+           <div>
+                <div class="h-50 d-flex flex-column justify-content-between align-items-center">
+     
+                <h2 class="text-center">BMI 紀錄</h2>
+                
+                <!-- ------------------------------------------------------------- -->
+                <div class="row bg-light w-50 h-25 border-bottom " v-for="item in temp"  >
+                    <div class="col-2 bleft-blue text-center mt-4" v-if="BMI<=18.5">過輕</div>
+                    <div class="col-2 bleft-green text-center mt-4" v-if=" 18.5<BMI && BMI<=25">理想</div>
+                    <div class="col-2 bleft-yellow text-center mt-4" v-if=" 25<BMI && BMI<=30">過重</div>
+                    <div class="col-2 bleft-FF982D text-center mt-4" v-if=" 30<BMI && BMI<=35">輕度肥胖</div>
+                    <div class="col-2 bleft-FF6C03 text-center mt-4" v-if=" 35<BMI && BMI<=40">中度肥胖</div>
+                    <div class="col-2 bleft-FF1200 text-center mt-4"  v-if=" BMI>40">重度肥胖</div>
+
+
+
+
+                    <div class="col-2 text-center mt-4" >BMI:{{item.BMI}}</div>
+                    <div class="col-2 text-center mt-4">身高:{{item.height}}</div>
+                    <div class="col-2 text-center mt-4">體重:{{item.weight}}</div>
+                     <div class="col-2 text-center mt-4">{{item.year}}/{{item.month}}/{{item.day}}</div>
+                </div>
+              
+               
+<!-- ---------------------------------------------------------------->
+                
+                <input type="button" value="清除歷史紀錄" class="text-center w-20 d-block" >
+                </div>
+           
+
+            </div>
+
+        
+       
+        
+    </div>
+      
+    <div class="h-30 bg-warning text-center ">
+        <img class="footer-img" src="https://hexschool.github.io/JavaScript_HomeWork/assets/BMICLogo.png">
+    </div>
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/vue@next"></script>
+<script src="js/all.js"></script>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="col-2 bleft-green" v-if=" 18.5<BMI && BMI<=25">理想</div>
+    <div class="col-2 bleft-yellow" v-if=" 25<BMI && BMI<=30">過重</div>
+    <div class="col-2 bleft-FF982D" v-if="30<BMI && BMI<=35">輕度肥胖</div>
+    <div class="col-2 bleft-FF6C03" v-if="35<BMI && BMI<=40">中度肥胖</div>
+    <div class="col-2 bleft-FF1200" v-if="BMI>40 ">重度肥胖</div> -->
+
+
+ 
+     
